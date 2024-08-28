@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FirstProgram</string>
+    <string name="result">Kết quả</string>
+    <string name="plus">+</string>
+    <string name="subtract">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+    <string name="modulo">%</string>
 </resources>
