@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Staff</string>
+    <string name="txt_name">Hà Nhận</string>
+    <string name="txt_phone1">+84 859 504 886</string>
+    <string name="txt_mobile">Mobile</string>
+    <string name="txt_phone2">+84 368 385 529</string>
+    <string name="txt_email">kkk123@gmail.com</string>
+</resources>
