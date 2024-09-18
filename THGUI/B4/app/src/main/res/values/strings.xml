@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TinhchisoBMI</string>
+    <string name="title1">CHƯƠNG TRÌNH TÍNH CHỈ SỐ BMI</string>
+    <string name="name">Nhập tên:</string>
+    <string name="txtname">Nhập tên</string>
+    <string name="height">Chiều cao:</string>
+    <string name="txtheight">Nhập chiều cao</string>
+    <string name="weight">Cân nặng:</string>
+    <string name="txtweight">Nhập cân nặng</string>
+    <string name="btnbmi">TÍNH BMI</string>
+</resources>

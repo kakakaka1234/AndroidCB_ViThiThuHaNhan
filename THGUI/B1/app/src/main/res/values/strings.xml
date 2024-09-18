@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lập trình hướng sự kiện</string>
+    <string name="btnplus">Tổng 2 số</string>
+    <string name="btnsub">Hiệu 2 số</string>
+    <string name="btnmulty">Tích 2 số</string>
+    <string name="btndivide">Thương 2 số</string>
+    <string name="btnucln">Ước chung lớn nhất</string>
+    <string name="btnout">Thoát</string>
+    <string name="btntoC">Convert to Celsius</string>
+    <string name="btntoF">Convert to Fahrenheit</string>
+    <string name="title1">CHƯƠNG TRÌNH TÍNH CHỈ SỐ BMI</string>
+    <string name="name">Nhập tên:</string>
+    <string name="txtname">Nhập tên</string>
+    <string name="height">Chiều cao:</string>
+    <string name="txtheight">Nhập chiều cao</string>
+    <string name="weight">Cân nặng:</string>
+    <string name="txtweight">Nhập cân nặng</string>
+    <string name="btnbmi">TÍNH BMI</string>
+
+</resources>

@@ -1,0 +1,159 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".B4">
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="350dp"
+            android:layout_height="36dp"
+            android:background="#214914"
+            android:gravity="center"
+            android:text="@string/title1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            tools:ignore="MissingConstraints" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:text="@string/name"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtname"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_weight="2"
+            android:hint="@string/txtname"
+            tools:ignore="MissingConstraints" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:text="@string/height"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtheight"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="2"
+            android:hint="@string/txtheight"
+            tools:ignore="MissingConstraints" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:text="@string/weight"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtweight"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_weight="2"
+            android:hint="@string/txtweight"
+            tools:ignore="MissingConstraints" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+b
+        <Button
+            android:id="@+id/btnbmi"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:backgroundTint="#AFABAB"
+            android:gravity="center"
+            android:text="@string/btnbmi"
+            android:textColor="@color/red"
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bmi"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="BMI="
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtbmi"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_weight="2"
+            android:hint="."
+            tools:ignore="MissingConstraints" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/rs"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="Chẩn đoán"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtrs"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="2"
+            android:hint="."
+            tools:ignore="MissingConstraints" />
+
+    </TableRow>
+
+</TableLayout>

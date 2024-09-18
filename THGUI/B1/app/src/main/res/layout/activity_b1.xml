@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".B1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/A"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="56dp"
+            android:hint="Nhập A"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:text="Số A:"
+            app:layout_constraintEnd_toStartOf="@id/A"
+            app:layout_constraintHorizontal_bias="0.913"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/B"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="20dp"
+            android:hint="Nhập B"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/A" />
+
+        <TextView
+            android:id="@+id/txtb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Số B:"
+            app:layout_constraintEnd_toStartOf="@id/B"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txta" />
+
+        <TextView
+            android:id="@+id/rs"
+            android:layout_width="249dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/purple_200"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/B" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dark"
+            android:text="@string/btnplus"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rs" />
+
+        <Button
+            android:id="@+id/btnsubtract"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/dark"
+            android:text="@string/btnsub"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnPlus" />
+
+        <Button
+            android:id="@+id/btnmulty"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/dark"
+            android:text="@string/btnmulty"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnsubtract" />
+
+        <Button
+            android:id="@+id/btndivide"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/dark"
+            android:text="@string/btndivide"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnmulty" />
+
+        <Button
+            android:id="@+id/btucln"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/dark"
+            android:text="@string/btnucln"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btndivide" />
+
+        <Button
+            android:id="@+id/btnout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dark"
+            android:text="@string/btnout"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btucln" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

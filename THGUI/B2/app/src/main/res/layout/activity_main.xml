@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/F"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Fahrenheit"
+        android:inputType="numberDecimal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celsius"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/C"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Celsius"
+        android:inputType="numberDecimal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/toC"
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/black"
+            android:text="@string/btntoC" />
+
+        <Button
+            android:id="@+id/toF"
+            android:layout_width="220dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/black"
+            android:text="@string/btntoF" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/dark"
+        android:textColor="@color/black"
+        android:text="Clear" />
+
+</LinearLayout>
