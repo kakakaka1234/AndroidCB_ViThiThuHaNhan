@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Invalid Fahrenheit value", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(MainActivity.this, "Please enter a Fahrenheit value", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Please enter a F value", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Invalid Celsius value", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(MainActivity.this, "Please enter a Celsius value", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Please enter a C value", Toast.LENGTH_LONG).show();
                 }
             }
         });

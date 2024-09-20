@@ -7,93 +7,109 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Integer so1 =0;
-    Integer so2 =0;
+    Integer so1 = 0;
+    Integer so2 = 0;
     Character dau = null;
+    boolean isSecondNumber = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        final TextView txtkq = (TextView)findViewById(R.id.kq);
-        Button So0 = (Button)findViewById(R.id.so0);So0.setOnClickListener(new View.OnClickListener(){@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if(dau==null){so1 = Integer.parseInt(txtkq.getText().toString());} else{so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So1 = (Button)findViewById(R.id.so1);So1.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So2 = (Button)findViewById(R.id.so2);So2.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So3 = (Button)findViewById(R.id.so3);So3.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So4 = (Button)findViewById(R.id.so4);So4.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So5 = (Button)findViewById(R.id.so5);So5.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So6 = (Button)findViewById(R.id.so6);So6.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So7 = (Button)findViewById(R.id.so7);So7.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So8 = (Button)findViewById(R.id.so8);So8.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
-        Button So9 = (Button)findViewById(R.id.so9);So9.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) {txtkq.setText(txtkq.getText().toString());if (dau == null) {so1 = Integer.parseInt(txtkq.getText().toString());} else {so2 = Integer.parseInt(txtkq.getText().toString());}}});
 
-        Button Cong = (Button)findViewById(R.id.cong);
-        Cong.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dau = '+';
-                txtkq.setText("");
-            }
-        });
-        Button Tru = (Button)findViewById(R.id.tru);
-        Tru.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dau = '-';
-                txtkq.setText("");
-            }
-        });
-        Button Nhan = (Button)findViewById(R.id.nhan);
-        Nhan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dau = '*';
-                txtkq.setText("");
-            }
-        });
-        Button Chia = (Button)findViewById(R.id.chia);
-        Cong.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dau = '/';
-                txtkq.setText("");
-            }
-        });
+        final TextView txtkq = (TextView) findViewById(R.id.kq);
 
-        Button Bang = (Button)findViewById(R.id.bang);
+        View.OnClickListener numberClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Button btn = (Button) view;
+                String num = btn.getText().toString();
+                String currentText = txtkq.getText().toString();
+
+                txtkq.setText(currentText + num);
+
+                if (!isSecondNumber) {
+                    so1 = Integer.parseInt(txtkq.getText().toString());
+                } else {
+                    so2 = Integer.parseInt(txtkq.getText().toString());
+                }
+            }
+        };
+
+        findViewById(R.id.so0).setOnClickListener(numberClickListener);
+        findViewById(R.id.so1).setOnClickListener(numberClickListener);
+        findViewById(R.id.so2).setOnClickListener(numberClickListener);
+        findViewById(R.id.so3).setOnClickListener(numberClickListener);
+        findViewById(R.id.so4).setOnClickListener(numberClickListener);
+        findViewById(R.id.so5).setOnClickListener(numberClickListener);
+        findViewById(R.id.so6).setOnClickListener(numberClickListener);
+        findViewById(R.id.so7).setOnClickListener(numberClickListener);
+        findViewById(R.id.so8).setOnClickListener(numberClickListener);
+        findViewById(R.id.so9).setOnClickListener(numberClickListener);
+
+        View.OnClickListener operatorClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Button btn = (Button) view;
+                dau = btn.getText().charAt(0);
+                isSecondNumber = true;
+                txtkq.setText("");
+            }
+        };
+
+        findViewById(R.id.cong).setOnClickListener(operatorClickListener);
+        findViewById(R.id.tru).setOnClickListener(operatorClickListener);
+        findViewById(R.id.nhan).setOnClickListener(operatorClickListener);
+        findViewById(R.id.chia).setOnClickListener(operatorClickListener);
+
+        Button Bang = (Button) findViewById(R.id.bang);
         Bang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(dau==null){
-                    Integer KQ = 0;
-                    switch (dau){
-                        case '+': KQ = so1 + so2;break;
-                        case '-': KQ = so1 = so2;break;
-                        case '*': KQ = so1 * so2;break;
-                        case '/': KQ = so1 / so2;break;
+                if (dau != null) {
+                    Double KQ = 0.0;
 
+                    switch (dau) {
+                        case '+':
+                            KQ = so1 + so2 * 1.0;
+                            break;
+                        case '-':
+                            KQ = so1 - so2 * 1.0;
+                            break;
+                        case 'X':
+                            KQ = so1 * so2 * 1.0;
+                            break;
+                        case '/':
+                            if (so2 == 0) {
+                                txtkq.setText("Lỗi: Chia 0");
+                                return;
+                            } else {
+                                KQ = so1 / (double) so2;
+                            }
+                            break;
                     }
-                    txtkq.setText(KQ.toString());
-                    so1 =KQ;
+
+                    txtkq.setText(String.valueOf(KQ));
+                    so1 = KQ.intValue();
+                    so2 = 0;
                     dau = null;
+                    isSecondNumber = false;
                 }
             }
         });
 
-        Button Xoa = (Button)findViewById(R.id.xoa);
+        Button Xoa = (Button) findViewById(R.id.xoa);
         Xoa.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
-                so1 = null;
-                so2 = null;
+                so1 = 0;
+                so2 = 0;
                 dau = null;
+                isSecondNumber = false;
                 txtkq.setText("");
             }
         });
